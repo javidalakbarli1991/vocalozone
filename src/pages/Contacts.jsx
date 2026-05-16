@@ -71,13 +71,12 @@ function Contacts() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Contacts</p>
           <h1 className="mt-2 font-display text-4xl text-white">Let us build your audio setup.</h1>
           <p className="mt-4 text-slate-300">
-            Reach out for product support, partnership ideas, or tailored creator
-            bundles.
+            Vocalozone helps you keep a clear voice when you need it most. The Vocalozone throat care range is specifically formulated to soothe hard-working voices and has been trusted by many of the world's most iconic voices since 1912.
           </p>
           <div className="mt-6 space-y-2 text-sm text-slate-300">
             <p>Email: hello@vocalozone.com</p>
-            <p>Phone: +1 (555) 904-2211</p>
-            <p>Address: 218 Harbor Lane, Studio District</p>
+            <p>Phone: +994 55 282 0404</p>
+            <p>Address: 39/106 Shamsi Badalbeyli kucesi, Baku AZ1010</p>
           </div>
         </article>
 

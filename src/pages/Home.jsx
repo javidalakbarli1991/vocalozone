@@ -58,6 +58,33 @@ function Home() {
           <Carousel images={carouselImages} />
         </div>
       </section>
+
+      {/* Why Choose Vocalzone */}
+      <section className="bg-black py-16 md:py-24 px-4 md:px-6 border-t border-slate-800">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Why Choose Vocalzone?</h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="font-semibold text-orange-400 mb-2">✓ Since 1912</h3>
+              <p className="text-slate-300 text-sm">Over a century of trusted vocal care</p>
+            </div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="font-semibold text-orange-400 mb-2">✓ No Numbing Agents</h3>
+              <p className="text-slate-300 text-sm">Soothe without masking underlying issues</p>
+            </div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="font-semibold text-orange-400 mb-2">✓ Certified Vegan</h3>
+              <p className="text-slate-300 text-sm">Gluten & lactose free with sugar-free options</p>
+            </div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
+              <h3 className="font-semibold text-orange-400 mb-2">✓ Professional Grade</h3>
+              <p className="text-slate-300 text-sm">Used by world-renowned voices</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

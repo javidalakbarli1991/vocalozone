@@ -8,7 +8,7 @@ function WhatIs() {
         <img src={image7} alt="Background" className="w-full h-full object-cover" />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black via-black/50 to-transparent" />
       
       {/* Content on right */}
       <div className="relative z-20 ml-auto w-1/2 px-4 py-16 md:px-6 md:py-24 flex flex-col gap-10">
