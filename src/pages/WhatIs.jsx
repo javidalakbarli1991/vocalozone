@@ -5,23 +5,23 @@ function WhatIs() {
   const { t } = useTranslation()
 
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden flex items-center">
+    <section className="relative overflow-hidden bg-black text-white">
       {/* Background image on left */}
-      <div className="absolute left-0 top-0 w-1/2 h-full">
-        <img src={image7} alt="Background" className="w-full h-full object-cover" />
+      <div className="absolute inset-x-0 top-0 h-[42vh] sm:h-[48vh] md:inset-y-0 md:left-0 md:w-1/2 md:h-full">
+        <img src={image7} alt="Background" className="h-full w-full object-cover" />
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-l from-black via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-black/55 to-black/85 md:bg-linear-to-l md:from-black md:via-black/50 md:to-transparent" />
       
       {/* Content on right */}
-      <div className="relative z-20 ml-auto w-1/2 px-4 py-16 md:px-6 md:py-24 flex flex-col gap-10">
+      <div className="relative z-20 mx-auto flex min-h-[calc(100svh-1px)] w-full max-w-6xl flex-col gap-8 px-4 py-16 md:ml-auto md:w-1/2 md:px-6 md:py-24 md:pl-10">
         <div>
-          <h1 className="font-display text-5xl leading-tight text-white md:text-6xl">
+          <h1 className="max-w-xl font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
             {t('whatIs.heading')}
           </h1>
         </div>
 
-        <article className="space-y-6 text-lg leading-relaxed text-slate-200">
+        <article className="space-y-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
           <p>{t('whatIs.intro1')}</p>
 
           <p className="text-3xl font-display text-orange-400">

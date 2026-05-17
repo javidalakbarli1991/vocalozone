@@ -14,12 +14,13 @@ function Home() {
 
   return (
     <>
-      <section className="relative min-h-screen bg-black overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-linear-to-l from-black via-black/30 to-transparent z-10" />
+      <section className="relative overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-linear-to-b from-black via-black/35 to-black/70 sm:bg-linear-to-l sm:from-black sm:via-black/30 sm:to-transparent z-10" />
       
+      <div className="relative mx-auto grid min-h-[calc(100svh-1px)] w-full max-w-6xl items-center gap-8 px-4 py-10 sm:py-14 md:grid-cols-2 md:gap-10 md:px-6 md:py-16 lg:py-24">
       {/* Background image on left */}
-      <div className="absolute left-0 top-0 h-full w-1/2 p-4 md:p-6">
-        <div className="relative h-full overflow-hidden rounded-4xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+      <div className="order-2 md:order-1">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.45)] min-h-[240px] sm:min-h-[320px] md:min-h-[70vh]">
           <img
             src={bgImage}
             alt="Background"
@@ -31,30 +32,31 @@ function Home() {
       </div>
 
       {/* Content on right */}
-      <div className="relative z-20 ml-auto w-1/2 px-4 py-16 md:px-6 md:py-24 flex flex-col gap-10">
+      <div className="relative z-20 order-1 flex flex-col gap-8 md:order-2 md:pl-6 lg:pl-10">
         <div className="max-w-3xl">
      
-          <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="max-w-xl font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
             {t('home.heading')}
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-slate-200">
+          <p className="mt-5 max-w-xl text-base leading-7 text-slate-200 sm:text-lg">
             {t('home.description')}
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               to="/contacts"
-              className="rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700"
+              className="inline-flex w-full items-center justify-center rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700 sm:w-auto"
             >
               {t('home.contactBtn')}
             </Link>
             <Link
               to="/documentation"
-              className="rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:bg-slate-800"
+              className="inline-flex w-full items-center justify-center rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:bg-slate-800 sm:w-auto"
             >
               {t('home.docBtn')}
             </Link>
           </div>
         </div>
+      </div>
       </div>
       </section>
 
