@@ -64,84 +64,159 @@ function Contacts() {
   }
 
   return (
-    <section className="bg-black text-white min-h-screen">
-      <div className="mx-auto w-full max-w-6xl px-4 py-16 md:px-6 md:py-20">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-        <article className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Contacts</p>
-          <h1 className="mt-2 font-display text-4xl text-white">Let us build your audio setup.</h1>
-          <p className="mt-4 text-slate-300">
-            Vocalozone helps you keep a clear voice when you need it most. The Vocalozone throat care range is specifically formulated to soothe hard-working voices and has been trusted by many of the world's most iconic voices since 1912.
-          </p>
-          <div className="mt-6 space-y-2 text-sm text-slate-300">
-            <p>Email: hello@vocalozone.com</p>
-            <p>Phone: +994 55 282 0404</p>
-            <p>Address: 39/106 Shamsi Badalbeyli kucesi, Baku AZ1010</p>
-          </div>
-        </article>
+    <section className="relative overflow-hidden bg-black text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.2),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(34,211,238,0.12),transparent_26%),linear-gradient(180deg,rgba(2,6,23,0.98)_0%,rgba(15,23,42,0.96)_100%)]" />
+      <div className="pointer-events-none absolute -left-28 top-24 h-72 w-72 rounded-full bg-orange-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-1/2 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
 
-        <form className="rounded-3xl border border-slate-700 bg-slate-900 p-8 shadow-sm" onSubmit={handleSubmit}>
-          <h2 className="font-display text-2xl text-white">Send Message</h2>
-          <p className="mt-2 text-sm text-slate-400">
-            Messages are delivered to {recipientEmail} through EmailJS.
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-16 md:px-6 md:py-20">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Contacts</p>
+          <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+            Reach out with a message, a question, or a quick WhatsApp chat.
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
+            Use the form for direct support, or get in touch through the contact details below. We keep the layout simple, focused, and fast to use.
           </p>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <label className="text-sm font-medium text-slate-300">
-              Name
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <article className="rounded-4xl border border-slate-800/80 bg-white/5 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-10">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/15 text-orange-400">
+                📍
+              </span>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Direct contact</p>
+                <h2 className="mt-1 font-display text-2xl text-white">Vocalzone team</h2>
+              </div>
+            </div>
+
+            <div className="mt-8 space-y-4">
+              <a
+                href="mailto:hello@vocalozone.com"
+                className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-orange-500/60 hover:bg-slate-900"
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Email</p>
+                  <p className="mt-1 text-sm font-medium text-white">hello@vocalozone.com</p>
+                </div>
+                <span className="text-slate-500 transition group-hover:text-orange-400">↗</span>
+              </a>
+
+              <a
+                href="tel:+994552820404"
+                className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-orange-500/60 hover:bg-slate-900"
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Phone</p>
+                  <p className="mt-1 text-sm font-medium text-white">+994 55 282 0404</p>
+                </div>
+                <span className="text-slate-500 transition group-hover:text-orange-400">↗</span>
+              </a>
+
+              <a
+                href="https://wa.me/994102033003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-emerald-500/60 hover:bg-slate-900"
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">WhatsApp</p>
+                  <p className="mt-1 text-sm font-medium text-white">+994 10 203 30 03</p>
+                </div>
+                <span className="text-slate-500 transition group-hover:text-emerald-400">↗</span>
+              </a>
+
+              <div className="rounded-2xl border border-slate-700/80 bg-slate-950/40 px-4 py-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Address</p>
+                <p className="mt-1 text-sm font-medium leading-6 text-white">
+                  39/106 Shamsi Badalbeyli kucesi
+                  <br />
+                  Baku AZ1010
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-cyan-500/20 bg-cyan-400/5 px-4 py-4 text-sm text-slate-300">
+              Messages are routed to <span className="font-semibold text-white">{recipientEmail}</span> through EmailJS.
+            </div>
+          </article>
+
+          <form className="rounded-4xl border border-slate-800/80 bg-slate-950/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-10" onSubmit={handleSubmit}>
+            <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-6">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Send a note</p>
+                <h2 className="mt-2 font-display text-3xl text-white">Start the conversation</h2>
+              </div>
+              <div className="hidden rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400 sm:block">
+                Quick response
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <label className="text-sm font-medium text-slate-300">
+                Name
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
+                  required
+                />
+              </label>
+              <label className="text-sm font-medium text-slate-300">
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="you@example.com"
+                  className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
+                  required
+                />
+              </label>
+            </div>
+
+            <label className="mt-4 block text-sm font-medium text-slate-300">
+              Message
+              <textarea
+                name="message"
+                value={formData.message}
                 onChange={handleChange}
-                placeholder="Your name"
-                className="mt-1 w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-2.5 text-white placeholder-slate-500 outline-none ring-orange-300 transition focus:ring"
+                rows="6"
+                placeholder="Tell us what you need"
+                className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
                 required
               />
             </label>
-            <label className="text-sm font-medium text-slate-300">
-              Email
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="you@example.com"
-                className="mt-1 w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-2.5 text-white placeholder-slate-500 outline-none ring-orange-300 transition focus:ring"
-                required
-              />
-            </label>
-          </div>
-          <label className="mt-4 block text-sm font-medium text-slate-300">
-            Message
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="5"
-              placeholder="Tell us what you need"
-              className="mt-1 w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-2.5 text-white placeholder-slate-500 outline-none ring-orange-300 transition focus:ring"
-              required
-            />
-          </label>
-          {status.message ? (
-            <p
-              className={`mt-4 rounded-xl px-4 py-3 text-sm font-medium ${
-                status.type === 'success'
-                  ? 'bg-emerald-900/50 text-emerald-300'
-                  : 'bg-rose-900/50 text-rose-300'
-              }`}
-            >
-              {status.message}
-            </p>
-          ) : null}
-          <button
-            type="submit"
-            disabled={isSending}
-            className="mt-5 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-orange-800"
-          >
-            {isSending ? 'Sending...' : 'Submit'}
-          </button>
-        </form>
+
+            {status.message ? (
+              <p
+                className={`mt-4 rounded-2xl border px-4 py-3 text-sm font-medium ${
+                  status.type === 'success'
+                    ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300'
+                    : 'border-rose-500/30 bg-rose-500/10 text-rose-300'
+                }`}
+              >
+                {status.message}
+              </p>
+            ) : null}
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <button
+                type="submit"
+                disabled={isSending}
+                className="rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-orange-800"
+              >
+                {isSending ? 'Sending...' : 'Submit'}
+              </button>
+              <p className="text-sm text-slate-400">We reply as soon as possible during business hours.</p>
+            </div>
+          </form>
         </div>
       </div>
     </section>

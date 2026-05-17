@@ -14,7 +14,7 @@ function About() {
         
         {/* Header */}
         <div className="space-y-6 border-b border-slate-800 pb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600">About Vocalozone</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600">About Vocalzone</p>
           <h1 className="font-display text-6xl font-bold leading-tight">
             Trusted Quality. <br /> Proven Heritage.
           </h1>
@@ -31,7 +31,7 @@ function About() {
               Ayriz MMC was incorporated in August 2016. It's a family business with all members of the family playing a key role in developing and nurturing the growth of the company.
             </p>
             <p>
-              Ayriz is the distributor for Vocalozone throat care products from Kestrel Medical in the United Kingdom, and Calmosissne baby welfare products made by Laboratoires Laudavie in France. Both ranges are non-medicine organic products.
+              Ayriz is the distributor for Vocalzone throat care products from Kestrel Medical in the United Kingdom, and Calmosissne baby welfare products made by Laboratoires Laudavie in France. Both ranges are non-medicine organic products.
             </p>
           </div>
           <div className="pt-4 border-t border-slate-800">
@@ -47,13 +47,13 @@ function About() {
           <h2 className="font-display text-2xl font-semibold">About The Manufacturers</h2>
           <div className="space-y-4 text-slate-300">
             <p>
-              Kestrel Medical Limited was incorporated in March 2001 when it purchased Vocalozone Throat Pastilles. It's a family business with all members of the family playing a key role in developing and nurturing the growth of the company.
+              Kestrel Medical Limited was incorporated in March 2001 when it purchased Vocalzone Throat Pastilles. It's a family business with all members of the family playing a key role in developing and nurturing the growth of the company.
             </p>
             <p>
               However, what sets us apart in the ordinary pharmaceutical business! We don't flood ourselves in corporate bureaucracy, or hide ourselves behind a business wall. We love getting stuck in!
             </p>
             <p>
-              Vocalozone is not just our job, but our lifestyle and passion – music is at the heart of what we do, when the office playlist isn't playing, you'll probably find us at a concert or at a music festival.
+              Vocalzone is not just our job, but our lifestyle and passion – music is at the heart of what we do, when the office playlist isn't playing, you'll probably find us at a concert or at a music festival.
             </p>
           </div>
         </div>

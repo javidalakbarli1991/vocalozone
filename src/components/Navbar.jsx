@@ -18,7 +18,7 @@ function Navbar() {
         <NavLink to="/" className="group flex items-center gap-2">
           <span className="inline-block h-3 w-3 rounded-full bg-orange-500 shadow-[0_0_14px_rgba(249,115,22,0.7)]" />
           <span className="font-display text-xl tracking-wide text-white transition group-hover:text-orange-400">
-            Vocalozone
+            Vocalzone
           </span>
         </NavLink>
 

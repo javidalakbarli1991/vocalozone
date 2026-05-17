@@ -6,9 +6,9 @@ function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'az', name: 'Azərbaycanca', flag: '🇦🇿' },
+    { code: 'en', name: 'English' },
+    { code: 'ru', name: 'Русский' },
+    { code: 'az', name: 'Azərbaycanca' },
   ]
 
   const currentLang = languages.find(l => l.code === language)

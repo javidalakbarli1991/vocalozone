@@ -12,8 +12,8 @@ export const translations = {
       contacts: "Contacts"
     },
     home: {
-      heading: "Vocalozone helps you keep a clear voice when you need it most.",
-      description: "The Vocalozone throat care range is specifically formulated to soothe hard-working voices and has been trusted by many of the world's most iconic voices since 1912.",
+      heading: "Vocalzone helps you keep a clear voice when you need it most.",
+      description: "The Vocalzone throat care range is specifically formulated to soothe hard-working voices and has been trusted by many of the world's most iconic voices since 1912.",
       contactBtn: "Contact Team",
       docBtn: "View Documentation",
       carouselTitle: "Discover Our Collections",
@@ -30,7 +30,7 @@ export const translations = {
     },
     footer: {
       tagline: "Built for creators. Powered by sound.",
-      company: "Vocalozone",
+      company: "Vocalzone",
       phone: "📞 +994 55 282 0404",
       address1: "39/106 Shamsi Badalbeyli kucesi",
       address2: "Baku AZ1010"
@@ -45,8 +45,8 @@ export const translations = {
       contacts: "Контакты"
     },
     home: {
-      heading: "Vocalozone помогает вам сохранить четкий голос, когда вы нуждаетесь в нем больше всего.",
-      description: "Линейка средств для ухода за горлом Vocalozone специально разработана для успокоения перегруженных голосов и пользуется доверием многих из самых знаковых голосов мира с 1912 года.",
+      heading: "Vocalzone помогает вам сохранить четкий голос, когда вы нуждаетесь в нем больше всего.",
+      description: "Линейка средств для ухода за горлом Vocalzone специально разработана для успокоения перегруженных голосов и пользуется доверием многих из самых знаковых голосов мира с 1912 года.",
       contactBtn: "Связаться с нами",
       docBtn: "Просмотреть документацию",
       carouselTitle: "Откройте наши коллекции",
@@ -78,8 +78,8 @@ export const translations = {
       contacts: "Əlaqə"
     },
     home: {
-      heading: "Vocalozone ən çox ehtiyac duyduğunuz zaman açıq sesinizi saxlamağa kömək edir.",
-      description: "Vocalozone boğaz qayğısı seriyası çox çalışan səsləri yatışdırmaq üçün xüsusi olaraq formalaşdırılmışdır və 1912-ci ildən bəri dünyanın ən ikonik səslərinin etibarına layiq olmuşdur.",
+      heading: "Vocalzone ən çox ehtiyac duyduğunuz zaman açıq sesinizi saxlamağa kömək edir.",
+      description: "Vocalzone boğaz qayğısı seriyası çox çalışan səsləri yatışdırmaq üçün xüsusi olaraq formalaşdırılmışdır və 1912-ci ildən bəri dünyanın ən ikonik səslərinin etibarına layiq olmuşdur.",
       contactBtn: "Bizimlə Əlaqə",
       docBtn: "Sənədləşməni Görmək",
       carouselTitle: "Koleksiyalarımızı kəşf edin",
