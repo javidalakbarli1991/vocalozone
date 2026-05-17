@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../i18n'
 import bgImage from '../assets/images/1.jpeg'
 import image2 from '../assets/images/2.jpeg'
 import image3 from '../assets/images/3.jpeg'
@@ -8,6 +9,7 @@ import image9 from '../assets/images/9.jpeg'
 import Carousel from '../components/Carousel'
 
 function Home() {
+  const { t } = useTranslation()
   const carouselImages = [image2, image3, image4, image5, image9]
 
   return (
@@ -25,23 +27,23 @@ function Home() {
         <div className="max-w-3xl">
      
           <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
-            Vocalozone helps you keep a clear voice when you need it most.
+            {t('home.heading')}
           </h1>
           <p className="mt-5 max-w-xl text-lg text-slate-200">
-            The Vocalozone throat care range is specifically formulated to soothe hard-working voices and has been trusted by many of the world's most iconic voices since 1912.
+            {t('home.description')}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
               to="/contacts"
               className="rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700"
             >
-              Contact Team
+              {t('home.contactBtn')}
             </Link>
             <Link
               to="/documentation"
               className="rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:bg-slate-800"
             >
-              View Documentation
+              {t('home.docBtn')}
             </Link>
           </div>
         </div>
@@ -52,8 +54,8 @@ function Home() {
       <section className="bg-black py-16 md:py-24 px-4 md:px-6">
         <div className="mx-auto w-full max-w-6xl">
           <div className="mb-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Discover Our Collections</h2>
-            <p className="mt-2 text-slate-400">Explore our premium product range and experience the difference</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">{t('home.carouselTitle')}</h2>
+            <p className="mt-2 text-slate-400">{t('home.carouselDesc')}</p>
           </div>
           <Carousel images={carouselImages} />
         </div>
@@ -63,24 +65,24 @@ function Home() {
       <section className="bg-black py-16 md:py-24 px-4 md:px-6 border-t border-slate-800">
         <div className="mx-auto w-full max-w-6xl">
           <div className="mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Why Choose Vocalzone?</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">{t('home.whyChooseTitle')}</h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="font-semibold text-orange-400 mb-2">✓ Since 1912</h3>
-              <p className="text-slate-300 text-sm">Over a century of trusted vocal care</p>
+              <h3 className="font-semibold text-orange-400 mb-2">✓ {t('home.since1912')}</h3>
+              <p className="text-slate-300 text-sm">{t('home.since1912Desc')}</p>
             </div>
             <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="font-semibold text-orange-400 mb-2">✓ No Numbing Agents</h3>
-              <p className="text-slate-300 text-sm">Soothe without masking underlying issues</p>
+              <h3 className="font-semibold text-orange-400 mb-2">✓ {t('home.noNumbing')}</h3>
+              <p className="text-slate-300 text-sm">{t('home.noNumbingDesc')}</p>
             </div>
             <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="font-semibold text-orange-400 mb-2">✓ Certified Vegan</h3>
-              <p className="text-slate-300 text-sm">Gluten & lactose free with sugar-free options</p>
+              <h3 className="font-semibold text-orange-400 mb-2">✓ {t('home.certifiedVegan')}</h3>
+              <p className="text-slate-300 text-sm">{t('home.certifiedVeganDesc')}</p>
             </div>
             <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-6">
-              <h3 className="font-semibold text-orange-400 mb-2">✓ Professional Grade</h3>
-              <p className="text-slate-300 text-sm">Used by world-renowned voices</p>
+              <h3 className="font-semibold text-orange-400 mb-2">✓ {t('home.professionalGrade')}</h3>
+              <p className="text-slate-300 text-sm">{t('home.professionalGradeDesc')}</p>
             </div>
           </div>
         </div>
