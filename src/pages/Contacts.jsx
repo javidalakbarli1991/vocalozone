@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useTranslation } from '../i18n'
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -7,6 +8,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 const recipientEmail = import.meta.env.VITE_CONTACT_RECIPIENT_EMAIL || 'hello@vocalozone.com'
 
 function Contacts() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +32,7 @@ function Contacts() {
     if (!serviceId || !templateId || !publicKey) {
       setStatus({
         type: 'error',
-        message: 'EmailJS is not configured yet. Add your VITE_EMAILJS values in .env.local.',
+        message: t('contacts.status.configuredError'),
       })
       return
     }
@@ -50,13 +52,13 @@ function Contacts() {
 
       setStatus({
         type: 'success',
-        message: 'Message sent successfully. We will reply by email soon.',
+        message: t('contacts.status.success'),
       })
       setFormData({ name: '', email: '', message: '' })
     } catch {
       setStatus({
         type: 'error',
-        message: 'Message could not be sent. Please try again in a moment.',
+        message: t('contacts.status.failure'),
       })
     } finally {
       setIsSending(false)
@@ -71,12 +73,12 @@ function Contacts() {
 
       <div className="relative mx-auto w-full max-w-6xl px-4 py-16 md:px-6 md:py-20">
         <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Contacts</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{t('contacts.eyebrow')}</p>
           <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
-            Reach out with a message, a question, or a quick WhatsApp chat.
+            {t('contacts.heading')}
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-            Use the form for direct support, or get in touch through the contact details below. We keep the layout simple, focused, and fast to use.
+            {t('contacts.subheading')}
           </p>
         </div>
 
@@ -87,8 +89,8 @@ function Contacts() {
                 📍
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Direct contact</p>
-                <h2 className="mt-1 font-display text-2xl text-white">Vocalzone team</h2>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{t('contacts.directContact')}</p>
+                <h2 className="mt-1 font-display text-2xl text-white">{t('contacts.team')}</h2>
               </div>
             </div>
 
@@ -98,7 +100,7 @@ function Contacts() {
                 className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-orange-500/60 hover:bg-slate-900"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Email</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{t('contacts.emailLabel')}</p>
                   <p className="mt-1 text-sm font-medium text-white">hello@vocalozone.com</p>
                 </div>
                 <span className="text-slate-500 transition group-hover:text-orange-400">↗</span>
@@ -109,7 +111,7 @@ function Contacts() {
                 className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-orange-500/60 hover:bg-slate-900"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Phone</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{t('contacts.phoneLabel')}</p>
                   <p className="mt-1 text-sm font-medium text-white">+994 55 282 0404</p>
                 </div>
                 <span className="text-slate-500 transition group-hover:text-orange-400">↗</span>
@@ -122,14 +124,14 @@ function Contacts() {
                 className="group flex items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-4 py-4 transition hover:border-emerald-500/60 hover:bg-slate-900"
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">WhatsApp</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{t('contacts.whatsappLabel')}</p>
                   <p className="mt-1 text-sm font-medium text-white">+994 10 203 30 03</p>
                 </div>
                 <span className="text-slate-500 transition group-hover:text-emerald-400">↗</span>
               </a>
 
               <div className="rounded-2xl border border-slate-700/80 bg-slate-950/40 px-4 py-4">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Address</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{t('contacts.addressLabel')}</p>
                 <p className="mt-1 text-sm font-medium leading-6 text-white">
                   39/106 Shamsi Badalbeyli kucesi
                   <br />
@@ -139,42 +141,42 @@ function Contacts() {
             </div>
 
             <div className="mt-8 rounded-2xl border border-cyan-500/20 bg-cyan-400/5 px-4 py-4 text-sm text-slate-300">
-              Messages are routed to <span className="font-semibold text-white">{recipientEmail}</span> through EmailJS.
+              {t('contacts.routedTo')} <span className="font-semibold text-white">{recipientEmail}</span> {t('contacts.viaEmailJs')}
             </div>
           </article>
 
           <form className="rounded-4xl border border-slate-800/80 bg-slate-950/70 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-10" onSubmit={handleSubmit}>
             <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Send a note</p>
-                <h2 className="mt-2 font-display text-3xl text-white">Start the conversation</h2>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{t('contacts.sendNote')}</p>
+                <h2 className="mt-2 font-display text-3xl text-white">{t('contacts.formHeading')}</h2>
               </div>
               <div className="hidden rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400 sm:block">
-                Quick response
+                {t('contacts.quickResponse')}
               </div>
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <label className="text-sm font-medium text-slate-300">
-                Name
+                {t('contacts.nameLabel')}
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder={t('contacts.namePlaceholder')}
                   className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
                   required
                 />
               </label>
               <label className="text-sm font-medium text-slate-300">
-                Email
+                {t('contacts.emailLabel')}
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="you@example.com"
+                  placeholder={t('contacts.emailPlaceholder')}
                   className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
                   required
                 />
@@ -182,13 +184,13 @@ function Contacts() {
             </div>
 
             <label className="mt-4 block text-sm font-medium text-slate-300">
-              Message
+              {t('contacts.messageLabel')}
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows="6"
-                placeholder="Tell us what you need"
+                placeholder={t('contacts.messagePlaceholder')}
                 className="mt-2 w-full rounded-2xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
                 required
               />
@@ -212,9 +214,9 @@ function Contacts() {
                 disabled={isSending}
                 className="rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-orange-800"
               >
-                {isSending ? 'Sending...' : 'Submit'}
+                {isSending ? t('contacts.sending') : t('contacts.submit')}
               </button>
-              <p className="text-sm text-slate-400">We reply as soon as possible during business hours.</p>
+              <p className="text-sm text-slate-400">{t('contacts.footerNote')}</p>
             </div>
           </form>
         </div>

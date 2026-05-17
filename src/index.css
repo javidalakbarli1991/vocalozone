@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Serif+Display:wght@500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui;
-  --font-display: 'Space Grotesk', ui-sans-serif, system-ui;
+  --font-sans: 'Noto Sans', ui-sans-serif, system-ui;
+  --font-display: 'Noto Serif Display', ui-serif, Georgia, serif;
 }
 
 @layer base {

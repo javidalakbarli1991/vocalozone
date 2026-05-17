@@ -1,17 +1,19 @@
 import { useState } from 'react'
+import { useTranslation } from '../i18n'
 import approvalImg from '../assets/images/docs/approval.png'
 import certificateImg from '../assets/images/docs/certificate.png'
 import letterImg from '../assets/images/docs/letter.png'
 import purchaseImg from '../assets/images/docs/purchaseorder.png'
 
 function Documentation() {
+  const { t } = useTranslation()
   const [selectedImage, setSelectedImage] = useState(null)
 
   const documents = [
-    { id: 1, image: approvalImg, title: 'Approval Certificate' },
-    { id: 2, image: certificateImg, title: 'Food Safety Certificate' },
-    { id: 3, image: letterImg, title: 'Quality Assurance Letter' },
-    { id: 4, image: purchaseImg, title: 'Purchase Order' },
+    { id: 1, image: approvalImg, title: t('documentation.documents.approval') },
+    { id: 2, image: certificateImg, title: t('documentation.documents.certificate') },
+    { id: 3, image: letterImg, title: t('documentation.documents.letter') },
+    { id: 4, image: purchaseImg, title: t('documentation.documents.purchase') },
   ]
 
   return (
@@ -23,14 +25,13 @@ function Documentation() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-16 md:px-6 md:py-24">
           <div className="max-w-3xl">
             <p className="mb-4 inline-flex rounded-full border border-orange-400 bg-orange-900/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-orange-300">
-              Our Credentials
+              {t('documentation.eyebrow')}
             </p>
             <h1 className="font-display text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
-              Certifications & Documentation
+              {t('documentation.heading')}
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-slate-300">
-              Browse our official certifications, approvals, and documentation that
-              demonstrate our commitment to quality and compliance.
+              {t('documentation.subheading')}
             </p>
           </div>
 
@@ -68,7 +69,7 @@ function Documentation() {
             <button
               onClick={() => setSelectedImage(null)}
               className="sticky top-4 right-4 float-right text-slate-400 hover:text-slate-100 transition z-10"
-              aria-label="Close modal"
+              aria-label={t('documentation.closeLabel')}
             >
               <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

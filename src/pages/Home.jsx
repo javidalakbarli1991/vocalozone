@@ -15,11 +15,19 @@ function Home() {
   return (
     <>
       <section className="relative min-h-screen bg-black overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/30 to-transparent z-10" />
+        <div className="absolute inset-0 bg-linear-to-l from-black via-black/30 to-transparent z-10" />
       
       {/* Background image on left */}
-      <div className="absolute left-0 top-0 w-1/2 h-full">
-        <img src={bgImage} alt="Background" className="w-full h-full object-cover" />
+      <div className="absolute left-0 top-0 h-full w-1/2 p-4 md:p-6">
+        <div className="relative h-full overflow-hidden rounded-4xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+          <img
+            src={bgImage}
+            alt="Background"
+            className="h-full w-full object-cover object-center scale-[1.03] transition duration-700 ease-out hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-black/10" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+        </div>
       </div>
 
       {/* Content on right */}

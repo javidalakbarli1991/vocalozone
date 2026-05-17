@@ -1,12 +1,15 @@
+import { useTranslation } from '../i18n'
 import image2 from '../assets/images/2.jpeg'
 
 function About() {
+  const { t } = useTranslation()
+
   return (
     <section className="relative min-h-screen bg-black overflow-hidden text-white">
       {/* Image on left */}
       <div className="absolute left-0 top-0 w-1/2 h-full">
         <img src={image2} alt="About" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-black via-black/50 to-transparent" />
       </div>
 
       {/* Content on right */}
@@ -14,25 +17,25 @@ function About() {
         
         {/* Header */}
         <div className="space-y-6 border-b border-slate-800 pb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600">About Vocalzone</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600">{t('about.eyebrow')}</p>
           <h1 className="font-display text-6xl font-bold leading-tight">
-            Trusted Quality. <br /> Proven Heritage.
+            {t('about.heading').split('\n').map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           <p className="text-lg text-slate-300 max-w-md leading-relaxed">
-            Founded on principles of excellence and family values
+            {t('about.subheading')}
           </p>
         </div>
 
         {/* Family Business */}
         <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Family Business</h2>
+          <h2 className="font-display text-2xl font-semibold">{t('about.familyTitle')}</h2>
           <div className="space-y-4 text-slate-300">
-            <p>
-              Ayriz MMC was incorporated in August 2016. It's a family business with all members of the family playing a key role in developing and nurturing the growth of the company.
-            </p>
-            <p>
-              Ayriz is the distributor for Vocalzone throat care products from Kestrel Medical in the United Kingdom, and Calmosissne baby welfare products made by Laboratoires Laudavie in France. Both ranges are non-medicine organic products.
-            </p>
+            <p>{t('about.familyText1')}</p>
+            <p>{t('about.familyText2')}</p>
           </div>
           <div className="pt-4 border-t border-slate-800">
             <p className="text-sm text-slate-400">
@@ -44,17 +47,11 @@ function About() {
 
         {/* Manufacturers */}
         <div className="space-y-6 border-t border-slate-800 pt-12">
-          <h2 className="font-display text-2xl font-semibold">About The Manufacturers</h2>
+          <h2 className="font-display text-2xl font-semibold">{t('about.manufacturersTitle')}</h2>
           <div className="space-y-4 text-slate-300">
-            <p>
-              Kestrel Medical Limited was incorporated in March 2001 when it purchased Vocalzone Throat Pastilles. It's a family business with all members of the family playing a key role in developing and nurturing the growth of the company.
-            </p>
-            <p>
-              However, what sets us apart in the ordinary pharmaceutical business! We don't flood ourselves in corporate bureaucracy, or hide ourselves behind a business wall. We love getting stuck in!
-            </p>
-            <p>
-              Vocalzone is not just our job, but our lifestyle and passion – music is at the heart of what we do, when the office playlist isn't playing, you'll probably find us at a concert or at a music festival.
-            </p>
+            <p>{t('about.manufacturersText1')}</p>
+            <p>{t('about.manufacturersText2')}</p>
+            <p>{t('about.manufacturersText3')}</p>
           </div>
         </div>
 
