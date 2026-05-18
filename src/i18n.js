@@ -110,7 +110,7 @@ export const translations = {
       }
     },
     footer: {
-      tagline: "Built for creators. Powered by sound.",
+      tagline: "",
       company: "Vocalzone",
       contactTitle: "Contact",
       followTitle: "Follow",

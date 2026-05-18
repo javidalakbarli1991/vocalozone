@@ -54,7 +54,6 @@ function Footer() {
               <span className="inline-block h-2 w-2 rounded-full bg-orange-500" />
               <span className="font-display text-lg font-bold text-white">{t('footer.company')}</span>
             </div>
-            <p className="text-sm text-slate-400">{t('footer.tagline')}</p>
             <p className="text-xs text-slate-500 leading-relaxed">
               Premium throat care solutions trusted by the world's most iconic voices since 1912.
             </p>
