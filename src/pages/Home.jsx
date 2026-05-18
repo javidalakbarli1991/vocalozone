@@ -7,6 +7,7 @@ import image4 from '../assets/images/4.jpeg'
 import image5 from '../assets/images/5.jpeg'
 import image9 from '../assets/images/9.jpeg'
 import Carousel from '../components/Carousel'
+import Logos from '../components/Logos'
 
 function Home() {
   const { t } = useTranslation()
@@ -70,6 +71,9 @@ function Home() {
           <Carousel images={carouselImages} />
         </div>
       </section>
+
+      {/* Partners / Logos section */}
+      <Logos />
 
       {/* Why Choose Vocalzone */}
       <section className="bg-black py-16 md:py-24 px-4 md:px-6 border-t border-slate-800">

@@ -1,4 +1,7 @@
+import { useTranslation } from '../i18n'
+
 function Footer() {
+  const { t } = useTranslation()
   const socialLinks = [
     {
       name: 'Facebook',
@@ -49,9 +52,9 @@ function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <span className="inline-block h-2 w-2 rounded-full bg-orange-500" />
-              <span className="font-display text-lg font-bold text-white">Vocalozone</span>
+              <span className="font-display text-lg font-bold text-white">{t('footer.company')}</span>
             </div>
-            <p className="text-sm text-slate-400">Built for creators. Powered by sound.</p>
+            <p className="text-sm text-slate-400">{t('footer.tagline')}</p>
             <p className="text-xs text-slate-500 leading-relaxed">
               Premium throat care solutions trusted by the world's most iconic voices since 1912.
             </p>
@@ -59,12 +62,12 @@ function Footer() {
 
           {/* Contact section */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">{t('footer.contactTitle')}</h3>
             <div className="space-y-2 text-sm text-slate-400">
               <p className="flex items-center gap-2">
                 <span>📞</span>
                 <a href="tel:+994552820404" className="hover:text-orange-400 transition">
-                  +994 55 282 0404
+                  {t('footer.phone')}
                 </a>
               </p>
               <p className="flex items-center gap-2">
@@ -76,8 +79,8 @@ function Footer() {
               <p className="flex items-start gap-2">
                 <span>📍</span>
                 <span className="leading-relaxed">
-                  39/106 Shamsi Badalbeyli kucesi<br />
-                  Baku AZ1010
+                  {t('footer.address1')}<br />
+                  {t('footer.address2')}
                 </span>
               </p>
             </div>
@@ -85,7 +88,7 @@ function Footer() {
 
           {/* Social section */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Follow</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">{t('footer.followTitle')}</h3>
             <div className="flex gap-3">
               {socialLinks.map((link) => (
                 <a
@@ -110,7 +113,7 @@ function Footer() {
 
         {/* Bottom footer */}
         <div className="mt-8 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-slate-500">
-          <p>&copy; 2024 Vocalozone. All rights reserved.</p>
+          <p>&copy; 2024 {t('footer.company')}. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-300 transition">Privacy Policy</a>
             <a href="#" className="hover:text-slate-300 transition">Terms of Service</a>

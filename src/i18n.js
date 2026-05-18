@@ -100,9 +100,20 @@ export const translations = {
       professionalGrade: "Professional Grade",
       professionalGradeDesc: "Used by world-renowned voices"
     },
+    partners: {
+      heading: "Our Partners",
+      desc: "We work with trusted companies",
+      names: {
+        avromed: "Avromed",
+        azerimed: "Azerimed",
+        zeytun: "Zeytun"
+      }
+    },
     footer: {
       tagline: "Built for creators. Powered by sound.",
       company: "Vocalzone",
+      contactTitle: "Contact",
+      followTitle: "Follow",
       phone: "📞 +994 55 282 0404",
       address1: "39/106 Shamsi Badalbeyli kucesi",
       address2: "Baku AZ1010"
@@ -133,6 +144,15 @@ export const translations = {
       certifiedVeganDesc: "Без глютена и лактозы с вариантами без сахара",
       professionalGrade: "Профессиональный класс",
       professionalGradeDesc: "Используется всемирно известными голосами"
+    },
+    partners: {
+      heading: "Наши партнёры",
+      desc: "Мы сотрудничаем с доверенными компаниями",
+      names: {
+        avromed: "Avromed",
+        azerimed: "Azerimed",
+        zeytun: "Zeytun"
+      }
     },
     documentation: {
       eyebrow: "Наши документы",
@@ -208,6 +228,8 @@ export const translations = {
     footer: {
       tagline: "Построено для творцов. Приводится в движение звуком.",
       company: "Vocalzone",
+      contactTitle: "Контакты",
+      followTitle: "Подписывайтесь",
       phone: "📞 +994 55 282 0404",
       address1: "39/106 Shamsi Badalbeyli kucesi",
       address2: "Baku AZ1010"
@@ -237,7 +259,16 @@ export const translations = {
       certifiedVegan: "Sertifikatlı vegan",
       certifiedVeganDesc: "Şəkərsiz variantlarla gluten və laktozasız",
       professionalGrade: "Peşəkar səviyyə",
-      professionalGradeDesc: "Dünya şöhrətli səslər tərəfindən istifadə olunur"
+      professionalGradeDesc: "Dünya məşhur səsləri tərəfindən istifadə olunur"
+    },
+    partners: {
+      heading: "Tərəfdaşlarımız",
+      desc: "Etibarlı şirkətlərlə əməkdaşlıq edirik",
+      names: {
+        avromed: "Avromed",
+        azerimed: "Azerimed",
+        zeytun: "Zeytun"
+      }
     },
     documentation: {
       eyebrow: "Sənədlərimiz",
@@ -313,6 +344,8 @@ export const translations = {
     footer: {
       tagline: "Yaradıcılar üçün qurulmuş. Səs tərəfindən idarə olunur.",
       company: "Vocalzone",
+      contactTitle: "Əlaqə",
+      followTitle: "Bizi izləyin",
       phone: "📞 +994 55 282 0404",
       address1: "39/106 Shamsi Badalbeyli kucesi",
       address2: "Baku AZ1010"
