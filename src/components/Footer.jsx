@@ -64,15 +64,14 @@ function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">{t('footer.contactTitle')}</h3>
             <div className="space-y-2 text-sm text-slate-400">
               <p className="flex items-center gap-2">
-                <span>📞</span>
                 <a href="tel:+994552820404" className="hover:text-orange-400 transition">
-                  {t('footer.phone')}
+                  {t('footer.phone')} (WhatsApp)
                 </a>
               </p>
               <p className="flex items-center gap-2">
                 <span>💬</span>
                 <a href="https://wa.me/994102033003" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition">
-                  +994 10 203 30 03 (WhatsApp)
+                  +994 10 203 30 03 
                 </a>
               </p>
               <p className="flex items-start gap-2">
